@@ -1,3 +1,4 @@
 spring:
   jpa:
     show-sql: true
+# mySQL 버전에 맞는 dialect 나중에 찾아보기

@@ -1,4 +1,4 @@
-package com.eddie.springboot.web.domain.posts;
+package com.eddie.springboot.domain.posts;
 
 import com.eddie.springboot.domain.posts.Posts;
 import com.eddie.springboot.domain.posts.PostsRepository;
@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 // @SpringBootTest 가 이미 @ExtendWith(SpringExtension.class) 를 갖고 있으므로
