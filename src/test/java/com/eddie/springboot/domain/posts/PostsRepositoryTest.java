@@ -1,7 +1,5 @@
 package com.eddie.springboot.domain.posts;
 
-import com.eddie.springboot.domain.posts.Posts;
-import com.eddie.springboot.domain.posts.PostsRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
