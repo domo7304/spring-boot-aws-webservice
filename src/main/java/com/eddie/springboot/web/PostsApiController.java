@@ -1,11 +1,14 @@
 package com.eddie.springboot.web;
 
 import com.eddie.springboot.service.posts.PostsService;
+import com.eddie.springboot.web.dto.PostsListResponseDto;
 import com.eddie.springboot.web.dto.PostsResponseDto;
 import com.eddie.springboot.web.dto.PostsSaveRequestDto;
 import com.eddie.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -23,8 +26,19 @@ public class PostsApiController {
         return postsService.update(id, requestDto);
     }
 
+    @GetMapping("/api/v1/posts")
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsService.findAllDesc();
+    }
+
     @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById (@PathVariable Long id){
         return postsService.findById(id);
+    }
+
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id){
+        postsService.delete(id);
+        return id;
     }
 }
