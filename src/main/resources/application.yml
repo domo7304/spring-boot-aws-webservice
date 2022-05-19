@@ -6,4 +6,6 @@ spring:
       enabled: true
   datasource:
     url: jdbc:h2:mem:testdb
-# mySQL 버전에 맞는 dialect 나중에 찾아보기
+    # mySQL 버전에 맞는 dialect 나중에 찾아보기
+  profiles:
+    include: oauth
