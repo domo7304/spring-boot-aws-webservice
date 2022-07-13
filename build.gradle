@@ -20,12 +20,14 @@ dependencies {
 
     // lombok
     implementation 'org.projectlombok:lombok'
+    implementation 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok'
 
     // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    // OAuth2
+    // Security, OAuth2
+    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 }
 

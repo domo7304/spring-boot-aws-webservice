@@ -26,18 +26,21 @@ public class PostsApiController {
         return postsService.update(id, requestDto);
     }
 
-    @GetMapping("/api/v1/posts")
-    public List<PostsListResponseDto> findAllDesc() {
-        return postsService.findAllDesc();
-    }
-
+    // 아래 findAllDesc(), findById(), delete() 에 대한 테스트코드 필요
     @GetMapping("/api/v1/posts/{id}")
     public PostsResponseDto findById (@PathVariable Long id){
         return postsService.findById(id);
     }
 
+    // 해당 API, 책에서는 REST API 가 아니라 템플릿 엔진으로 결과값을 전달하는 방식으로 구현했지만
+    // 내 코드에서는 REST API 로 변경
+    @GetMapping("/api/v1/posts")
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsService.findAllDesc();
+    }
+
     @DeleteMapping("/api/v1/posts/{id}")
-    public Long delete(@PathVariable Long id){
+    public Long delete(@PathVariable Long id) {
         postsService.delete(id);
         return id;
     }
